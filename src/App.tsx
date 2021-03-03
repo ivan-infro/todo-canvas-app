@@ -14,6 +14,7 @@ import {
 import "./App.css";
 
 import { reducer } from "./store";
+import { RedirectForm } from "./RedirectForm";
 
 const initializeAssistant = (getState: any) => {
   if (process.env.NODE_ENV === "development") {
@@ -59,6 +60,9 @@ export const App: FC = memo(() => {
 
   return (
     <main className="container">
+      <div style={{ border: '1px solid red' }}>
+        <RedirectForm />
+      </div>
       <form
         onSubmit={(event) => {
           event.preventDefault();
